@@ -1,7 +1,4 @@
-# Latihan 5: Studi Kasus Gabungan — Laporan Ukuran Direktori
-
-Ini menggabungkan semua konsep dari Latihan 1–4: fungsi, `local`, argumen dinamis (`"$@"`),
-nilai default, validasi, dan exit code berbasis jumlah masalah.
+# Latihan 5: Laporan Ukuran Direktori
 
 ## Tugas
 Copy `template.sh` ke file `ukuran-direktori.sh`:

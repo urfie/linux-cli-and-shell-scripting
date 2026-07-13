@@ -4,7 +4,7 @@ Ini menggabungkan semua konsep dari Latihan 1–4: fungsi, `local`, argumen dina
 nilai default, validasi, dan exit code berbasis jumlah masalah.
 
 ## Tugas
-Edit `template.sh`:
+Copy `template.sh` ke file `ukuran-direktori.sh`:
 
 1. Jika dijalankan **tanpa argumen**, gunakan direktori saat ini (`.`) sebagai satu-satunya target (nilai default), JANGAN error.
 2. Jika dijalankan **dengan argumen**, proses semua argumen sebagai daftar direktori lewat `"$@"`.
@@ -17,7 +17,7 @@ Edit `template.sh`:
 
 ### Contoh
 ```
-$ ./template.sh dirA dirB dir_ngawur
+$ ./ukuran-direktori.sh dirA dirB dir_ngawur
 OK:dirA:124KB
 OK:dirB:8KB
 SKIP:dir_ngawur
@@ -28,7 +28,7 @@ $ echo $?
 
 ## Cara Cek Otomatis
 ```bash
-chmod +x template.sh cek_jawaban.sh
+chmod +x ukuran-direktori.sh cek_jawaban.sh
 ./cek_jawaban.sh
 ```
 *(Karena ukuran KB aktual tergantung filesystem, checker ini memvalidasi FORMAT baris `OK:`/`SKIP:`/`RINGKASAN:` dan exit code — bukan angka KB persis. Baca pesan FAIL untuk detail jika ada yang meleset.)*

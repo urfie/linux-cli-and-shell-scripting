@@ -3,14 +3,14 @@
 # Catatan: ukuran KB aktual bervariasi antar filesystem, jadi kita hanya
 # memvalidasi FORMAT baris dan jumlah berhasil/skip, bukan angka KB persis.
 
-SOLUSI="$(cd "$(dirname "$0")" && pwd)/template.sh"
+SOLUSI="$(cd "$(dirname "$0")" && pwd)/ukuran-direktori.sh"
 PASS=0
 FAIL=0
 TMPBASE=$(mktemp -d)
 trap 'rm -rf "$TMPBASE"' EXIT
 
 if [ ! -x "$SOLUSI" ]; then
-    echo "Skrip $SOLUSI belum bisa dieksekusi. Jalankan: chmod +x template.sh"
+    echo "Skrip $SOLUSI belum bisa dieksekusi. Jalankan: chmod +x ukuran-direktori.sh"
     exit 1
 fi
 
